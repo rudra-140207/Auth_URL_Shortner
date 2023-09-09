@@ -1,2 +1,4 @@
 node_modules/
+Frontened/node_modules/
+Backened/node_modules/
 .env
