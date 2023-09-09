@@ -122,6 +122,20 @@ body {
   .para a:hover {
     text-decoration: underline;
   }
+
+  .site-footer {
+    background-color: #3907de45;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    width: 25%;
+    margin:auto;
+  }
   
   @media (max-width : 600px) {
     .container {
@@ -149,6 +163,8 @@ body {
     }
   }
 
+  
+
   @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -172,18 +188,10 @@ body {
     .nav-links a {
         font-size: 15px;
     }
+
+    .footer-content{
+      width: 80%;
+    }
   }
 
-  .site-footer {
-    background-color: #3907de45;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
   
-  .footer-content {
-    width: 25%;
-    margin:auto;
-  }

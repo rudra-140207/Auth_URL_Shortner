@@ -140,6 +140,20 @@ th {
     font-size: 12px;
 }
 
+.site-footer {
+    background-color: #3907de45;
+    color: #fff;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    width: 25%;
+    margin:auto;
+  }
+
 
 
 @media screen and (max-width: 768px) {
@@ -189,18 +203,10 @@ th {
         height: 15px;
         width: 10px;  
     }
+
+    .footer-content{
+        width: 80%;
+    }
 }
 
-.site-footer {
-    background-color: #3907de45;
-    color: #fff;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer-content {
-    width: 25%;
-    margin:auto;
-  }
+
