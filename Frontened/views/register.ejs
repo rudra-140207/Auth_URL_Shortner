@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="header">
+        <img class="img" src="141916841_padded_logo.png" alt="logo" class="logo">
+        <ul class="nav-links">
+            <li><a href="home">Home</a></li>
+            <li><a href="login">Login</a></li>
+            <li><a href="register">Register</a></li>
+        </ul>
+    </div>
+    <br>
+    <div  class="container">
+        <h1>Registration</h1>
+        <p class="success-para"><%= locals.message %></p>
+        <form method="post" action="/register">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button class="btn" type="submit">Register</button>
+        </form>
+
+            <p class="para">if already registered , please
+                <a href="login">login</a>
+            </p>
+            
+    </div>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p class="footer-desc">Crafted with Care and Passion 
+          <br>
+          Email : rowdyrudra07online@gmail.com
+          </p>
+        </div>
+      </footer>
+</body>
+</html>

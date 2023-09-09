@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  <div class="header">
+    <img class="img" src="141916841_padded_logo.png" alt="logo" class="logo">
+    <ul class="nav-links">
+      <li><a href="home">Home</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="register">Register</a></li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <h1>Welcome</h1>
+    <p>
+      Our platform provides a secure and user-friendly environment, empowering you to create an account, log in, and
+      harness the power of your very own URL shortener.<br>
+      Our robust authentication system ensures your privacy and security, granting you exclusive access to your
+      personalized shortening .
+    </p>
+  </div>
+  <div class="feature-loaded">
+    <div class="feature">
+      <h2 class="feature-heading">User-Friendly Interface</h2>
+      <p class="feature-description">Navigating our platform is a breeze, allowing you to swiftly create and manage your
+        shortened URLs.</p>
+    </div>
+    <div class="feature">
+      <h2 class="feature-heading">Personalized Experience</h2>
+      <p class="feature-description">Once registered, you'll enjoy a seamless and tailored URL shortening experience,
+        complete with your unique preferences and settings.</p>
+    </div>
+    <div class="feature">
+      <h2 class="feature-heading">Secure Authentication</h2>
+      <p class="feature-description">Rest easy knowing that your data is protected by our advanced authentication
+        protocols, ensuring your account is accessible only to you.</p>
+    </div>
+    <div class="feature">
+      <h2 class="feature-heading">Effortless Management</h2>
+      <p class="feature-description">Easily keep track of your shortened links, enabling you to delete them as needed.
+      </p>
+    </div>
+    <div class="feature">
+      <h2 class="feature-heading">Share with Confidence</h2>
+      <p class="feature-description">Our short URLs are perfect for sharing on social media, emails, printed materials,
+        and more, enhancing your online presence and engagement.</p>
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-desc">Crafted with Care and Passion 
+      <br>
+      Email : rowdyrudra07online@gmail.com
+      </p>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const features = document.querySelectorAll('.feature');
+      features.forEach(feature => {
+        feature.addEventListener('click', () => {
+          feature.classList.toggle('active');
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

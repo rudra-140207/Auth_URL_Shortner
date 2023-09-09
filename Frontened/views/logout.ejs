@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout</title>
+    <link rel="stylesheet" href="logout.css">
+</head>
+
+<body>
+    <header>
+        <h2>Hello , <%= locals.name %>
+        </h2>
+        <form action="/logout" method="get">
+            <button class="btn">Logout</button>
+        </form>
+    </header>
+
+    <form method="post" action="/short">
+        <input class="input_url" type="url" placeholder="Original URL" name="long_url" required>
+        <button class="btn" type="submit">Shorten</button>
+    </form>
+
+
+
+    <table class="table-content">
+        <tr>
+            <th>ORIGINAL URL</th>
+            <th>SHORT URL</th>
+            <th></th>
+            <th></th>
+        </tr>
+        <% for(var i=(locals.count)-1 ;i>=0 ;i--) { %>
+            <tr>
+                <td>
+                    <%= locals.long_url[i] %>
+                </td>
+                <td class="short-url">
+                    <%= locals.short_url[i] %>
+                </td>
+                <td>
+                    <div class="icon-container">
+                        <a onclick="copyContent(this, '<%= locals.short_url[i] %>')">
+                            <img class="copy" src="copy.png">
+                        </a>
+                        <p class="text-copied">Copied</p>
+                    </div>
+                </td>
+                <td>
+                    <button 
+                    class="del_btn" 
+                    onclick="deleteURL('<%= locals.data_id[i] %>')"
+                    >Delete</button>
+                </td>
+            </tr>
+            <% } %>
+    </table>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+          <p class="footer-desc">Crafted with Care and Passion 
+          <br>
+          Email : rowdyrudra07online@gmail.com
+          </p>
+        </div>
+      </footer>
+
+    <script>
+
+
+        function deleteURL(url_id) {
+            window.location.href = `/delete_url/${url_id}`;
+        }
+
+        function copyContent(clickedElement, textToCopy) {
+            var input = document.createElement('input');
+            input.value = textToCopy;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand("copy");
+            document.body.removeChild(input);
+
+            var iconContainer = clickedElement.parentNode;
+            var copiedMessage = iconContainer.querySelector('.text-copied');
+            copiedMessage.style.display = 'block';
+
+            setTimeout(function () {
+                copiedMessage.style.display = "none";
+            }, 2000);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
