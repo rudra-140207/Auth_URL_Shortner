@@ -19,8 +19,11 @@ app.use(cookieParser());
 app.use(express.urlencoded({extended:true}));
 app.set('views', path.join(path.resolve(), '../Frontened/views'));
 
-mongoose.connect("mongodb://127.0.0.1:27017",{
-   dbName : "backened"
+const Password_db = process.env.Password_db ;
+
+const URI = "mongodb+srv://rowdyrudra07online:"+Password_db+"@clusterforurlshortner.wzzy353.mongodb.net/Backened?retryWrites=true&w=majority" ;
+mongoose.connect(URI,{
+   dbName : "Backened"
 }).then(()=>console.log("db connected")).catch(()=>console.log("error"));
 
 const schema  = mongoose.Schema({
